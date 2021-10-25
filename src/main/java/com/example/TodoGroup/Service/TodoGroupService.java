@@ -11,6 +11,8 @@ public interface TodoGroupService {
 	public List<TodoGroup> findAll();
 	
 	public TodoGroup updateTodoGroup(Long id,TodoGroup todoGroup);
+	
+	public void deleteById(Long id);
 
 	
 }

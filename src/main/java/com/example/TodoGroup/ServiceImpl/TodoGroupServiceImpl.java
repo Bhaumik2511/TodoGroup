@@ -39,6 +39,11 @@ public class TodoGroupServiceImpl implements TodoGroupService {
 		});
 
 	}
+
+	@Override
+	public void deleteById(Long id) {
+		todoGroupDao.deleteById(id);
+	}
 	
 
 	
