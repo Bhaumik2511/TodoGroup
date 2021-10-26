@@ -18,7 +18,7 @@ public class TodoGroup {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long groupId;
-	@JsonProperty("name")
+	@JsonProperty("username")
 	private String userName;
 	@JsonProperty("group_title")
 	private String title;
