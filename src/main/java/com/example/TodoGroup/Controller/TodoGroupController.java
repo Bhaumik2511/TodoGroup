@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,7 +24,10 @@ import com.example.TodoGroup.Service.TodoGroupService;
 public class TodoGroupController {
 
 	@Autowired
+	RestTemplate restTemplate;
+	@Autowired
 	private TodoGroupService service;
+	
 	
 	private static final String BASE_URL ="http://localhost:8082/todoItems/";
 	
@@ -58,14 +60,11 @@ public class TodoGroupController {
 	}
 	
 	
-	@Bean
-	private RestTemplate restTemplate() {
-	    return new RestTemplate();
-	}
+	
 	
 	private TodoGroup getDateFromService(TodoGroup grp) {
 		 ResponseEntity<TodoItem[]> responseEntity = 
-				    restTemplate().getForEntity(BASE_URL+grp.getGroup_id(), TodoItem[].class);
+				    restTemplate.getForEntity(BASE_URL+grp.getGroup_id(), TodoItem[].class);
 		 TodoItem[] userArray = responseEntity.getBody();
 		 List<TodoItem> list = Arrays.stream(userArray).collect(Collectors.toList());
 		 grp.setTodoItems(list);
