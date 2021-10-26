@@ -4,7 +4,7 @@ package com.example.TodoGroup.Entity;
 public class TodoItem {
 	
 	private Long itemId;
-	private String desciption;
+	private String description;
 
 	public Long getItemId() {
 		return itemId;
@@ -12,12 +12,13 @@ public class TodoItem {
 	public void setItemId(Long itemId) {
 		this.itemId = itemId;
 	}
-	public String getDesciption() {
-		return desciption;
+	public String getDescription() {
+		return description;
 	}
-	public void setDesciption(String desciption) {
-		this.desciption = desciption;
+	public void setDescription(String description) {
+		this.description = description;
 	}
+
 		
 
 }
