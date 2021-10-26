@@ -4,9 +4,9 @@
 http://localhost:8081/swagger-ui/index.html
 
 # H2 Database url
- URL		:http://localhost:8081/h2-console
- Username 	:Bhaumik23
- Password 	:pass123
+ 	-URL		:http://localhost:8081/h2-console
+ 	-Username 	:Bhaumik23
+ 	-Password 	:pass123
  
  
 
