@@ -1,6 +1,7 @@
 package com.example.TodoGroup.Entity;
 
 import java.time.LocalDateTime;
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -12,7 +13,6 @@ import javax.persistence.Transient;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "id")
 public class TodoGroup {
 
 	@Id
@@ -27,7 +27,7 @@ public class TodoGroup {
 	
 	
 	@Transient
-	private List<TodoItem> todoItems;
+	private List<TodoItem> todoItems = new LinkedList<>();
 	
 	
 	public LocalDateTime getCreatedDateTime() {
