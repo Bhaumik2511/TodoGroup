@@ -3,14 +3,14 @@
 # Swagger-UI  URL
 http://localhost:8081/swagger-ui/index.html
 
-#H2 Database url
+# H2 Database url
  URL		:http://localhost:8081/h2-console
  Username 	:Bhaumik23
  Password 	:pass123
  
  
 
-#Create Todo Group endpoint
+# Create Todo Group endpoint
 	-http://localhost:8081/create-group
 	-Accept Request body as name adn group_title
 	-For example :
